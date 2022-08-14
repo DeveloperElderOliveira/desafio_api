@@ -77,7 +77,7 @@ RESPONSE
     "success": true
 }
 ---------------------------------------------------------------------------
-- UPLOAD FILE
+- GET MOVIMENTAÇÕES
 ROUTE : http://localhost/api/get-movimentacoes
 
 BEARER TOKEN : 
