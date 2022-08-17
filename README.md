@@ -6,12 +6,12 @@ O teste consiste em parsear um arquivo de texto(CNAB) e salvar suas informaçõe
 
 # CRIANDO AMBIENTE DA API
 
-docker-compose up -d
+- docker-compose up -d
 
 # entrar no container
-docker-compose exec laravel.test sh
-composer install
-exit
+- docker-compose exec laravel.test sh
+- composer install
+- exit
 
 # reiniciar container, na raiz do projeto.
 docker restart desafio_api_laravel.test_1
