@@ -1,4 +1,8 @@
 # SOBRE
+PROJETO CRIADO PARA REALIZAR O DESAFIO ByCoders
+https://github.com/ByCodersTec/desafio-dev
+O teste consiste em parsear um arquivo de texto(CNAB) e salvar suas informações(transações financeiras) em uma base de dados a critério do candidato.
+## OBS: Para realizar o teste utilize o arquivo CNAB.txt localizado na raiz do projeto.
 
 # CRIANDO AMBIENTE DA API
 
