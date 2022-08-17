@@ -1,32 +1,30 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# SOBRE
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# CRIANDO AMBIENTE DA API
 
-# PHP 8
-# LARAVEL SAIL
-image: sail-8.1/app
-# Getting Started On Linux
-./vendor/bin/sail up
-# Sail Alias
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+docker-compose up -d
 
-https://laravel.com/docs/9.x/sail
-https://laravel.com/docs/9.x/installation
+# entrar no container
+docker-compose exec laravel.test sh
+composer install
+exit
 
-# Run Migrations
-sail artisan migrate
+# reiniciar container, na raiz do projeto.
+docker restart desafio_api_laravel.test_1
+criar arquivo .env a partir do .env.exemple (basta copiar e colar)
 
-# Run Seeder
-sail artisan db:seed
+# entrar no container novamente
+docker-compose exec laravel.test sh
+php artisan config:clear
+exit
+
+# na raiz do projeto
+sudo chmod o+w ./storage/ -R
+
 
 # Documentação API
 - LOGIN
-ROUTE : http://localhost/api/login
+ROUTE : http://localhost:80/api/login
 
 BODY
 
@@ -57,7 +55,7 @@ REPONSE
 }
 --------------------------------------------------------------------------
 - UPLOAD FILE
-ROUTE : http://localhost/api/store-file
+ROUTE : http://localhost:80/api/store-file
 
 BEARER TOKEN : 
 
@@ -78,7 +76,7 @@ RESPONSE
 }
 ---------------------------------------------------------------------------
 - GET MOVIMENTAÇÕES
-ROUTE : http://localhost/api/get-movimentacoes
+ROUTE : http://localhost:80/api/get-movimentacoes
 
 BEARER TOKEN : 
 
@@ -116,7 +114,7 @@ RESPONSE
                             "updated_at": "2022-08-14T20:20:06.000000Z"
                         }, 
 
-                        ...
+
 
 
 

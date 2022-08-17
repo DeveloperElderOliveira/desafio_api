@@ -67,7 +67,8 @@ class Movimentacao extends Model
 
 	public function getValorAttribute($value)
 	{					
-			return $value/100.00;
+			$num = $value/100.00;
+			return 'R$' . number_format($num, 2, ',', '.');
 	}
 
 	public function getCpfAttribute($value)
