@@ -14,16 +14,16 @@ O teste consiste em parsear um arquivo de texto(CNAB) e salvar suas informaçõe
 - exit
 
 # reiniciar container, na raiz do projeto.
-docker restart desafio_api_laravel.test_1
-criar arquivo .env a partir do .env.exemple (basta copiar e colar)
+- docker restart desafio_api_laravel.test_1
+- criar arquivo .env a partir do .env.exemple (basta copiar e colar)
 
 # entrar no container novamente
-docker-compose exec laravel.test sh
-php artisan config:clear
-exit
+- docker-compose exec laravel.test sh
+- php artisan config:clear
+- exit
 
 # na raiz do projeto
-sudo chmod o+w ./storage/ -R
+- sudo chmod o+w ./storage/ -R
 
 
 # Documentação API
