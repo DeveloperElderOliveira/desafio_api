@@ -4,7 +4,10 @@ namespace App\Services;
 use App\Models\Movimentacao;
 use App\Models\Loja;
 use App\Models\Dono;
+use Exception;
 use Illuminate\Support\Facades\Storage;
+
+use function PHPUnit\Framework\throwException;
 
 class MovimentacaoService {
 
@@ -17,6 +20,11 @@ class MovimentacaoService {
 
     public function storeFile($content){      
         $lines_file = $this->storeLocalFile($content);
+        
+        if(count($lines_file) == 0) {
+            return throw new Exception("O arquivo CNAB é inválido");
+        }
+
         $this->save($lines_file);           
     }
 

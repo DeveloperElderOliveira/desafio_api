@@ -33,8 +33,8 @@ class MovimentacaoController extends Controller
         try{
             $movimentacoes = $this->service->getMovimentacoes();
             return response()->json(['movimentacoes' => $movimentacoes]);
-        }catch(Exception){
-
+        }catch(Exception $e){
+            return response()->json(["error" => $e->getMessage(),401]);
         }
         
     }
