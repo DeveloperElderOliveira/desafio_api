@@ -25,7 +25,7 @@ O teste consiste em parsear um arquivo de texto(CNAB) e salvar suas informaçõe
 # na raiz do projeto
 - sudo chmod o+w ./storage/ -R
 
-#Execute os teste unitários
+# Execute os teste unitários
 - docker-compose exec laravel.test sh
 - php artisan test
 
